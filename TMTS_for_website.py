@@ -57,7 +57,7 @@ with col3:
     st.write(':arrow_right:')
 with col4:
     prod1=st.text_input('Product 1')
-with col4:
+with col5:
     prod2=st.text_input('Product 2 (optional)')
 reactants_list=[r for r in [react1,react2] if r!='']
 products_list=[p for p in [prod1,prod2] if p!='']
