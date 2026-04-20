@@ -3,8 +3,8 @@ numpy
 streamlit_ketcher
 rdkit
 #rdkit.Chem
-anytree
+#anytree
 os
 subprocess
 copy
-anytree
+#anytree
