@@ -54,11 +54,12 @@ reaction= st.text_input("Insert the SMILE notation of the reaction or draw it", 
 REQUESTED_REACTION = st_ketcher(reaction)
 st.markdown(f"Smile code for reaction: ``{REQUESTED_REACTION}``")
 
-# reaction=reaction.replace('-','')
-# reactants,products=reaction.split(">>")
-# reactants_list=reactants.split(".")
-# products_list=products.split(".")
-
+reaction=reaction.replace('-','')
+reactants,products=reaction.split(">>")
+reactants_list=reactants.split(".")
+products_list=products.split(".")
+st.write('Reactant(s)',reactants_list)
+st.write('Product(s)',reactants_list)
 # dic_reaction={"Target":[reactants_list,products_list]}
 
 ################################################################################
