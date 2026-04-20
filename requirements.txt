@@ -1,7 +1,7 @@
 streamlit
 numpy
 streamlit_ketcher
-rdkit
+rdkit=2022.03.3
 #rdkit.Chem
 #anytree
 os
