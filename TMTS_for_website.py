@@ -71,8 +71,8 @@ if '>>' in reaction:
     reactants,products=reaction.split(">>")
     reactants_list=reactants.split(".")
     products_list=products.split(".")
-st.write('Reactant(s)',reactants_list)
-st.write('Product(s)',products_list)
+# st.write('Reactant(s)',reactants_list)
+# st.write('Product(s)',products_list)
     
 dic_reaction={"Target":[reactants_list,products_list]}
 
