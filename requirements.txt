@@ -4,7 +4,7 @@ streamlit_ketcher
 rdkit==2022.03.3
 #rdkit.Chem
 #anytree
-os
+#os
 subprocess
 copy
 #anytree
