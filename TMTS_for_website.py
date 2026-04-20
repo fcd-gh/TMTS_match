@@ -63,10 +63,10 @@ reactants_list=[r for r in [react1,react2] if r!='']
 products_list=[p for p in [prod1,prod2] if p!='']
 
 st.write ('Or you can draw it in the following box:')
-REQUESTED_REACTION = st_ketcher()
-st.markdown(f"Smile code for reaction: ``{REQUESTED_REACTION}``")
-if '-' in REQUESTED_REACTION:
-    reaction=REQUESTED_REACTION.replace('-','')
+reaction = st_ketcher()
+st.markdown(f"Smile code for reaction: ``{reaction}``")
+if '-' in reaction:
+    reaction=reaction.replace('-','')
 if '>>' in reaction:
     reactants,products=reaction.split(">>")
     reactants_list=reactants.split(".")
