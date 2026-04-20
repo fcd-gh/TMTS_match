@@ -5,17 +5,17 @@ Created on Mon Apr 20 11:36:24 2026
 @author: citrango1
 """
 
-import subprocess as sub
-import copy
-from anytree import Node, RenderTree, PreOrderIter
-import ast,copy
-import os
-from rdkit import *
-from rdkit import Chem
-from rdkit.Chem import rdmolfiles
-from rdkit.Chem import Draw
-from rdkit.Chem.EnumerateStereoisomers import EnumerateStereoisomers, StereoEnumerationOptions,GetStereoisomerCount
-from rdkit.Chem.rdMolDescriptors import CalcNumAtomStereoCenters
+# import subprocess as sub
+# import copy
+# from anytree import Node, RenderTree, PreOrderIter
+# import ast,copy
+# import os
+# from rdkit import *
+# from rdkit import Chem
+# from rdkit.Chem import rdmolfiles
+# from rdkit.Chem import Draw
+# from rdkit.Chem.EnumerateStereoisomers import EnumerateStereoisomers, StereoEnumerationOptions,GetStereoisomerCount
+# from rdkit.Chem.rdMolDescriptors import CalcNumAtomStereoCenters
 import streamlit as st
 from streamlit_ketcher import st_ketcher
 
@@ -50,7 +50,7 @@ DEFAULT_REACTION = SMILES_REACTION
 reaction= st.text_input("Insert the SMILE notation of the reaction or draw it", DEFAULT_REACTION)
 
  
-reaction = st_ketcher(molecule)
+reaction = st_ketcher(reaction)
 st.markdown(f"Smile code for reaction: ``{SMILES_REACTION}``")
 
 reaction=reaction.replace('-','')
