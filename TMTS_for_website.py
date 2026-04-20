@@ -28,14 +28,14 @@ from streamlit_ketcher import st_ketcher
 
 st.title('Estimation of rate constants for common reactions in pyrolysis and combustions :fire:')
 st.subheader('Method available for isomerisations and beta-scissions, of alkyl radicals.'+
-            ' H abstractions will be available soon')
+            ' H-abstractions will be available soon')
 st.markdown("***F.C. Destro, R. Fournet, R. Bounaceur, P.A.Glaude, B. Sirjean***")
 st.markdown("***Université de Lorraine, CNRS, LRGP, F-54000 Nancy, France***")
 st.write("----------------------------------------------------------")
 
-st.write('For more information you dowload the related papers:\n ')
-st.write(' [Isomerisations](https://linkinghub.elsevier.com/retrieve/pii/S0010218024004413)\n')
-st.write(' [Beta-scissions](https://linkinghub.elsevier.com/retrieve/pii/S0010218025004821)')
+st.write('For more information, you can download the related papers:\n ')
+st.write(':newspaper: [Isomerisations](https://linkinghub.elsevier.com/retrieve/pii/S0010218024004413)\n')
+st.write(':newspaper: [Beta-scissions](https://linkinghub.elsevier.com/retrieve/pii/S0010218025004821)')
 
 st.write("----------------------------------------------------------")
 #st.image('Image2.JPG',width=500)
