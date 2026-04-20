@@ -26,7 +26,7 @@ from streamlit_ketcher import st_ketcher
 ##### First step: title and infos#########################################
 #st.image('Image1.JPG',width=850)
 
-st.title('Estimation of rate constants for common reactions in pyrolysis and combustions')
+st.title('Estimation of rate constants for common reactions in pyrolysis and combustions :atom: :boom:')
 st.subheader('Method available for isomerisations and beta-scissions, of alkyl radicals.'+
             ' H abstractions will be available soon')
 st.markdown("***F.C. Destro, R. Fournet, R. Bounaceur, P.A.Glaude, B. Sirjean***")
