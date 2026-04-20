@@ -11,7 +11,7 @@ from rdkit.Chem.EnumerateStereoisomers import EnumerateStereoisomers, StereoEnum
 from rdkit.Chem.rdMolDescriptors import CalcNumAtomStereoCenters
 from rdkit.Chem import AllChem
 from _kinetic import iso_alkyl_C3,iso_alkyl_C4,iso_alkyl_C5,iso_alkyl_C6,bs_alkyl_CH,bs_alkyl_CC,habs_H,habs_C,recomb
-import subprocess as sub
+#import subprocess as sub
 import copy
 from anytree import Node, RenderTree, PreOrderIter
 import ast
