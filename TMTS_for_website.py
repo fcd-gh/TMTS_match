@@ -48,7 +48,7 @@ st.write("----------------------------------------------------------")
 
 # DEFAULT_REACTION = SMILES_REACTION
 st.write(' You can either enter your reaction by inserting the SMILES of reactants and products \n in the following boxes')
-col1, col2, col3, col4,col5 = st.columns([1,1,1,1,1])
+col1, col2, col3, col4, col5 = st.columns(5, gap="small")
 with col1:
     react1=st.text_input('Reactant 1')
 with col2:
