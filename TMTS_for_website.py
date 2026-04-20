@@ -28,7 +28,7 @@ from streamlit_ketcher import st_ketcher
 
 st.title('Estimation of rate constants for common reactions in pyrolysis and combustions')
 st.subheader('Method available for isoerisations, beta-scissions, of alkyl radicals')
-st.markdown("***F.C. Destro, R. Fournet, R. Bounaceur, P.A.Glaude, B. Sirjean ***")
+st.markdown("***F.C. Destro, R. Fournet, R. Bounaceur, P.A.Glaude, B. Sirjean***")
 st.markdown("***Université de Lorraine, CNRS, LRGP, F-54000 Nancy, France***")
 st.write("----------------------------------------------------------")
 
@@ -50,15 +50,15 @@ DEFAULT_REACTION = SMILES_REACTION
 reaction= st.text_input("Insert the SMILE notation of the reaction or draw it", DEFAULT_REACTION)
 
  
-reaction = st_ketcher(reaction)
-st.markdown(f"Smile code for reaction: ``{SMILES_REACTION}``")
+REQUESTED_REACTION = st_ketcher(reaction)
+st.markdown(f"Smile code for reaction: ``{REQUESTED_REACTION}``")
 
-reaction=reaction.replace('-','')
-reactants,products=reaction.split(">>")
-reactants_list=reactants.split(".")
-products_list=products.split(".")
+# reaction=reaction.replace('-','')
+# reactants,products=reaction.split(">>")
+# reactants_list=reactants.split(".")
+# products_list=products.split(".")
 
-dic_reaction={"Target":[reactants_list,products_list]}
+# dic_reaction={"Target":[reactants_list,products_list]}
 
 ################################################################################
 ####################Third step: matching with model TS##########################
