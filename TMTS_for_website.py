@@ -27,7 +27,8 @@ from streamlit_ketcher import st_ketcher
 #st.image('Image1.JPG',width=850)
 
 st.title('Estimation of rate constants for common reactions in pyrolysis and combustions')
-st.subheader('Method available for isoerisations, beta-scissions, of alkyl radicals')
+st.subheader('Method available for isomerisations and beta-scissions, of alkyl radicals.'+
+            ' H abstractions will be available soon')
 st.markdown("***F.C. Destro, R. Fournet, R. Bounaceur, P.A.Glaude, B. Sirjean***")
 st.markdown("***Université de Lorraine, CNRS, LRGP, F-54000 Nancy, France***")
 st.write("----------------------------------------------------------")
@@ -43,7 +44,7 @@ st.write("----------------------------------------------------------")
 ####################Second step: retrieving the smiles##########################
 ################################################################################
 
-SMILES_REACTION = 'C[CH]C>>CC[CH2]' # Défaut reaction
+SMILES_REACTION = 'C[CH-]C>>CC[CH2-]' # Défaut reaction
 
 DEFAULT_REACTION = SMILES_REACTION
 
@@ -67,8 +68,8 @@ st.markdown(f"Smile code for reaction: ``{REQUESTED_REACTION}``")
 
 from match_reactions import cleanandclassify, matchreaction_BS, matchreaction_recomb, matchreaction_Habs, matchreaction_iso,addnewkinetic
 
-detailed_dic_reaction=cleanandclassify(dic_reaction)
-st.write('Read the reaction in the format of a dictionary:',detailed_dic_reaction)
+#detailed_dic_reaction=cleanandclassify(dic_reaction)
+"st.write('Read the reaction in the format of a dictionary:',detailed_dic_reaction)
 #arr_dic=addnewkinetic(detailed_dic_reaction)
 
 
