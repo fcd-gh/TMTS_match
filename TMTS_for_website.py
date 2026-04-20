@@ -82,9 +82,12 @@ dic_reaction={"Target":[reactants_list,products_list]}
 ################################################################################
 
 
-from match_reactions import cleanandclassify, addnewkinetic
+from match_reactions import cleanandclassify, addnewkinetic,check_reaction
 run_match=st.button("Find the rates for my reaction")
-if run_match:
+reaction_ok=check_reaction(dic_reaction)
+
+
+if run_match and reaction_ok:
     detailed_dic_reaction=cleanandclassify(dic_reaction)
     arr_dic=addnewkinetic(detailed_dic_reaction)
     model=list(arr_dic["Target"][3][0].keys())[0]
@@ -100,6 +103,8 @@ if run_match:
         st.write(f'{A}')
         st.write(f'{n}')    
         st.write(f'{Ea}')
+elif reaction_ok==False:
+    st.write('We could not find the SMILES for your reaction :sad:')
     
 
 

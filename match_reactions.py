@@ -18,6 +18,21 @@ import ast
 #import os
 from rdkit import RDLogger  
 
+def check_reaction(dic_reaction):
+    okay=True
+    reactants=dic_reaction["Target"][0]
+    products=dic_reaction["Target"][1]
+    for r in reactants:
+        Rrad=Chem.MolFromSmiles(Chem.MolToSmiles(Chem.MolFromSmiles(r)))
+        if Rrad==None:
+            okay=False
+    for p in products:
+        Prad=Chem.MolFromSmiles(Chem.MolToSmiles(Chem.MolFromSmiles(p)))
+        if Prad ==None:
+            okay=False
+    return okay
+    
+
 def findmatchHabs(typeofHabs,radreactant, molreactant, radproduct,molproduct):
     """
     Parameters
