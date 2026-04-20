@@ -6,5 +6,5 @@ rdkit==2022.03.3
 #anytree
 #os
 #subprocess
-copy
+#copy
 #anytree
