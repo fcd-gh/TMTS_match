@@ -69,7 +69,7 @@ st.markdown(f"Smile code for reaction: ``{REQUESTED_REACTION}``")
 from match_reactions import cleanandclassify, matchreaction_BS, matchreaction_recomb, matchreaction_Habs, matchreaction_iso,addnewkinetic
 
 #detailed_dic_reaction=cleanandclassify(dic_reaction)
-"st.write('Read the reaction in the format of a dictionary:',detailed_dic_reaction)
+#st.write('Read the reaction in the format of a dictionary:',detailed_dic_reaction)
 #arr_dic=addnewkinetic(detailed_dic_reaction)
 
 
