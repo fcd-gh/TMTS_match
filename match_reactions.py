@@ -24,11 +24,11 @@ def check_reaction(dic_reaction):
     products=dic_reaction["Target"][1]
     for r in reactants:
         Rrad=Chem.MolFromSmiles(Chem.MolToSmiles(Chem.MolFromSmiles(r)))
-        if Rrad==None:
+        if Rrad==None or r=='':
             okay=False
     for p in products:
         Prad=Chem.MolFromSmiles(Chem.MolToSmiles(Chem.MolFromSmiles(p)))
-        if Prad ==None:
+        if Prad ==None or p=='':
             okay=False
     return okay
     
