@@ -1,4 +1,4 @@
-streamlit
+streamlit==1.22.0
 numpy
 streamlit_ketcher
 rdkit==2022.03.3
