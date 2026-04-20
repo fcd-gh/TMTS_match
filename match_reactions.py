@@ -22,6 +22,8 @@ def check_reaction(dic_reaction):
     okay=True
     reactants=dic_reaction["Target"][0]
     products=dic_reaction["Target"][1]
+    if len(reactants)==0 or len(products)==0:
+        okay=False
     for r in reactants:
         Rrad=Chem.MolFromSmiles(Chem.MolToSmiles(Chem.MolFromSmiles(r)))
         if Rrad==None or r=='':
