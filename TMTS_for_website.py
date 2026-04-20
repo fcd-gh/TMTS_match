@@ -73,7 +73,7 @@ if '>>' in reaction:
     products_list=products.split(".")
 
     
-dic_reaction={"Target":[reactants_list,products_list]}
+
 
 
 ################################################################################
@@ -85,6 +85,7 @@ dic_reaction={"Target":[reactants_list,products_list]}
 from match_reactions import cleanandclassify, addnewkinetic,check_reaction
 
 run_match=st.button("Find the rates for my reaction")
+dic_reaction={"Target":[reactants_list,products_list]}
 reaction_ok=check_reaction(dic_reaction)
 
 
@@ -108,6 +109,8 @@ if run_match and reaction_ok:
     else:
         st.write("We are sorry, but this reaction is not covered by our database")
         why_not_covered=st.button('Want to know why?')
+        if why_not_covered:
+            st.write('This part of the code is still under construction :construction:')
 elif run_match and reaction_ok==False:
     st.write('We could not find the SMILES for your reaction :sob:')
     
