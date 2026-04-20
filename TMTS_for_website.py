@@ -71,10 +71,10 @@ if '>>' in reaction:
     reactants,products=reaction.split(">>")
     reactants_list=reactants.split(".")
     products_list=products.split(".")
-# st.write('Reactant(s)',reactants_list)
-# st.write('Product(s)',products_list)
+
     
 dic_reaction={"Target":[reactants_list,products_list]}
+
 
 ################################################################################
 ####################Third step: matching with model TS #########################
@@ -83,11 +83,14 @@ dic_reaction={"Target":[reactants_list,products_list]}
 
 
 from match_reactions import cleanandclassify, addnewkinetic,check_reaction
+
 run_match=st.button("Find the rates for my reaction")
 reaction_ok=check_reaction(dic_reaction)
 
 
 if run_match and reaction_ok:
+    st.write('Reactant(s)',reactants_list)
+    st.write('Product(s)',products_list)
     detailed_dic_reaction=cleanandclassify(dic_reaction)
     arr_dic=addnewkinetic(detailed_dic_reaction)
     model=list(arr_dic["Target"][3][0].keys())[0]
