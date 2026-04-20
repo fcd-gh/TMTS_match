@@ -109,7 +109,7 @@ if run_match and reaction_ok:
     else:
         st.write("We are sorry, but this reaction is not covered by our database")
         why_not_covered=st.button('Want to know why?')
-        if why_not_covered:
+        if why_not_covered==True:
             st.write('This part of the code is still under construction :construction:')
 elif run_match and reaction_ok==False:
     st.write('We could not find the SMILES for your reaction :sob:')
