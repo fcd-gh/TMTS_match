@@ -2,7 +2,7 @@ streamlit
 numpy
 streamlit_ketcher
 rdkit
-rdkit.Chem
+#rdkit.Chem
 anytree
 os
 subprocess
