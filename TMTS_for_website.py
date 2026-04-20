@@ -74,7 +74,7 @@ if '>>' in reaction:
 st.write('Reactant(s)',reactants_list)
 st.write('Product(s)',products_list)
     
-st.write(dic_reaction={"Target":[reactants_list,products_list]})
+dic_reaction={"Target":[reactants_list,products_list]}
 
 ################################################################################
 ####################Third step: matching with model TS##########################
@@ -83,10 +83,22 @@ st.write(dic_reaction={"Target":[reactants_list,products_list]})
 
 from match_reactions import cleanandclassify, matchreaction_BS, matchreaction_recomb, matchreaction_Habs, matchreaction_iso,addnewkinetic
 
-#detailed_dic_reaction=cleanandclassify(dic_reaction)
-#st.write('Read the reaction in the format of a dictionary:',detailed_dic_reaction)
-#arr_dic=addnewkinetic(detailed_dic_reaction)
-
+detailed_dic_reaction=cleanandclassify(dic_reaction)
+arr_dic=addnewkinetic(detailed_dic_reaction)
+model=list(arr_dic["Target"][3][0].keys())[0]
+A,n,Ea=arr_dic["Target"][3][0][model]
+st.write('Read the reaction in the format of a dictionary:',detailed_dic_reaction)
+st.write('The Arrhenius parameters for this reaction fitted between 500 and 2000K are (in cal, mol,s units):')
+res1,res2=st.columns(2)
+with res1:
+    st.write('Pre-exponential parameter:')
+    st.write('n parameter:')    
+    st.write('Activation energy:')
+with res2:
+    st.write(f'{A}')
+    st.write(f'{n}')    
+    st.write(f'Ea')
+    
 
 
 
