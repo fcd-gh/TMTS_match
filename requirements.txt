@@ -1,0 +1,10 @@
+streamlit
+numpy
+streamlit_ketcher
+rdkit
+rdkit.Chem
+anytree
+os
+subprocess
+copy
+anytree
