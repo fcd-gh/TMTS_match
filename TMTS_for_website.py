@@ -48,7 +48,7 @@ st.write("----------------------------------------------------------")
 
 # DEFAULT_REACTION = SMILES_REACTION
 st.write(' You can either enter your reaction by inserting the SMILES of reactants and products \n in the following boxes')
-col1, col2, col3, col4,col5 = st.columns([2,2,2,2,2])
+col1, col2, col3, col4,col5 = st.columns([1,1,1,1,1])
 with col1:
     react1=st.text_input('Reactant 1')
 with col2:
@@ -63,11 +63,10 @@ reactants_list=[r for r in [react1,react2] if r!='']
 products_list=[p for p in [prod1,prod2] if p!='']
 
 st.write ('Or you can draw it in the following box:')
-reaction=st.text_input("Insert the SMILE notation of the reaction or draw it:")
-REQUESTED_REACTION = st_ketcher(reaction)
+REQUESTED_REACTION = st_ketcher()
 st.markdown(f"Smile code for reaction: ``{REQUESTED_REACTION}``")
-if '-' in reaction:
-    reaction=reaction.replace('-','')
+if '-' in REQUESTED_REACTION:
+    reaction=REQUESTED_REACTION.replace('-','')
 if '>>' in reaction:
     reactants,products=reaction.split(">>")
     reactants_list=reactants.split(".")
