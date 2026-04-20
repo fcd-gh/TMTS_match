@@ -106,8 +106,8 @@ if run_match and reaction_ok:
         st.write(f'{A}')
         st.write(f'{n}')    
         st.write(f'{Ea}')
-elif reaction_ok==False:
-    st.write('We could not find the SMILES for your reaction :sad:')
+elif run_match and reaction_ok==False:
+    st.write('We could not find the SMILES for your reaction :sob:')
     
 
 
