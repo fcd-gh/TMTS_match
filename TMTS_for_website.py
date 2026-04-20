@@ -82,14 +82,14 @@ dic_reaction={"Target":[reactants_list,products_list]}
 ################################################################################
 
 
-from match_reactions import cleanandclassify, matchreaction_BS, matchreaction_recomb, matchreaction_Habs, matchreaction_iso,addnewkinetic
+from match_reactions import cleanandclassify, addnewkinetic
 run_match=st.button("Find the rates for my reaction")
 if run_match:
     detailed_dic_reaction=cleanandclassify(dic_reaction)
     arr_dic=addnewkinetic(detailed_dic_reaction)
     model=list(arr_dic["Target"][3][0].keys())[0]
     A,n,Ea=arr_dic["Target"][3][0][model][0],arr_dic["Target"][3][0][model][1],arr_dic["Target"][3][0][model][2]
-    st.write('Read the reaction in the format of a dictionary:',detailed_dic_reaction)
+    #st.write('Read the reaction in the format of a dictionary:',detailed_dic_reaction)
     st.write('The Arrhenius parameters for this reaction fitted between 500 and 2000K are (in cal, mol,s units):')
     res1,res2=st.columns(2)
     with res1:
