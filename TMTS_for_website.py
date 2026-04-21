@@ -113,6 +113,7 @@ if run_match and reaction_ok:
             st.write('This part of the code is still under construction :construction:')
 elif run_match and reaction_ok==False:
     st.write('We could not find the SMILES for your reaction :sob:')
+    st.write ('PLease verify the SMILES, it may be wrong :sweat_smile:')
     
 
 
